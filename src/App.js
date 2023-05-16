@@ -1,4 +1,4 @@
-import ClickButton from "./ClickButton";
+import ClickButton from "./Components/ClickButton";
 import MyComponent from "./MyComponent";
 
 function MyButton() {

@@ -33,13 +33,19 @@ function Profile() {
 
 function ProductPage() {
   const products = [
-    { title: "cabbage", id: 1 },
-    { title: "apple", id: 2 },
-    { title: "banana", id: 3 },
+    { title: "cabbage", id: 1, isFruit: false },
+    { title: "apple", id: 2, isFruit: true },
+    { title: "banana", id: 3, isFruit: true },
   ];
 
   const listItems = products.map((product) => (
-    <li key={product.id}>{product.title}</li>
+    <li key={product.id}
+      style = {{
+        color : product.isFruit ? "magenta" : "red"
+      }}
+    >
+      {product.title}
+    </li>
   ));
 
   return (

@@ -1,16 +1,16 @@
 function MyButton() {
-  return(
-    <div>
+  return (
+    <>
       <button>This is a Button</button>
-    </div>
+    </>
   );
 }
 
-export default function MyApp(){
-  return(
-    <div>
+export default function MyApp() {
+  return (
+    <>
       <h2>Hello World</h2>
       <MyButton />
-    </div>
+    </>
   );
 }

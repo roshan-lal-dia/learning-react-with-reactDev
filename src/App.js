@@ -1,4 +1,5 @@
-import { useState } from "react";
+import ClickButton from "./ClickButton";
+import MyComponent from "./MyComponent";
 
 function MyButton() {
   //logic I guess
@@ -6,19 +7,6 @@ function MyButton() {
   return (
     <>
       <button>This is a {buttonName}</button>
-    </>
-  );
-}
-
-function ClickButton() {
-  //logic I guess
-  const [count, setCount] = useState(0);
-  function handleClick() {
-    setCount(count + 1);
-  }
-  return (
-    <>
-      <button onClick={handleClick}>Clicked {count} times</button>
     </>
   );
 }
@@ -74,12 +62,13 @@ function ProductPage() {
 export default function MyApp() {
   return (
     <>
-      <h2>Hello World</h2>
+      <h2>Hello World!</h2>
       <Profile />
       <MyButton />
       <ProductPage />
       <ClickButton />
       <ClickButton />
+      <MyComponent />
     </>
   );
 }

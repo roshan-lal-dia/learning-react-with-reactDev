@@ -11,8 +11,7 @@ function MyButton() {
 function Profile() {
   const USER = {
     name: "Roshan Lal Dia 💞",
-    imageUrl:
-      "https://www.tensionends.com/wp-content/uploads/2022/09/Beautiful-Girl-DP-Images-1.jpg",
+    imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
     imageSize: 90,
   };
   return (
@@ -20,7 +19,7 @@ function Profile() {
       <h1>{USER.name}</h1>
       <img
         className="avatar"
-        src={USER.imageURL}
+        src={USER.imageUrl}
         alt={"Photo of " + USER.name}
         style={{
           width: USER.imageSize,

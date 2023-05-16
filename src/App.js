@@ -1,9 +1,24 @@
+import { useState } from "react";
+
 function MyButton() {
   //logic I guess
   let buttonName = "First Button";
   return (
     <>
       <button>This is a {buttonName}</button>
+    </>
+  );
+}
+
+function ClickButton() {
+  //logic I guess
+  const [count, setCount] = useState(0);
+  function handleClick() {
+    setCount(count + 1);
+  }
+  return (
+    <>
+      <button onClick={handleClick}>Clicked {count} times</button>
     </>
   );
 }
@@ -39,9 +54,10 @@ function ProductPage() {
   ];
 
   const listItems = products.map((product) => (
-    <li key={product.id}
-      style = {{
-        color : product.isFruit ? "magenta" : "red"
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? "magenta" : "red",
       }}
     >
       {product.title}
@@ -62,6 +78,8 @@ export default function MyApp() {
       <Profile />
       <MyButton />
       <ProductPage />
+      <ClickButton />
+      <ClickButton />
     </>
   );
 }

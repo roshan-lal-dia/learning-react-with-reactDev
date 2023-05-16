@@ -1,7 +1,9 @@
 function MyButton() {
+  //logic I guess
+  let buttonName = "First Button";
   return (
     <>
-      <button>This is a Button</button>
+      <button>This is a {buttonName}</button>
     </>
   );
 }

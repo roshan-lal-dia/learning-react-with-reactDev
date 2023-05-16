@@ -1,5 +1,6 @@
 import ClickButton from "./Components/ClickButton";
 import MyComponent from "./MyComponent";
+import { useState } from "react";
 
 function MyButton() {
   //logic I guess
@@ -7,6 +8,14 @@ function MyButton() {
   return (
     <>
       <button>This is a {buttonName}</button>
+    </>
+  );
+}
+
+function SameStateButton({ count, onClick }) {
+  return (
+    <>
+      <button onClick={onClick}>Clicked {count} times together</button>
     </>
   );
 }
@@ -60,6 +69,11 @@ function ProductPage() {
 }
 
 export default function MyApp() {
+  //sharing data between Components
+  const [count, setCount] = useState(0);
+  function handleClick() {
+    setCount(count + 1);
+  }
   return (
     <>
       <h2>Hello World!</h2>
@@ -69,6 +83,8 @@ export default function MyApp() {
       <ClickButton />
       <ClickButton />
       <MyComponent />
+      <SameStateButton count={count} onClick={handleClick} />
+      <SameStateButton count={count} onClick={handleClick} />
     </>
   );
 }

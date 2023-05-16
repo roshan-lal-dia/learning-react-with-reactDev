@@ -38,11 +38,15 @@ function ProductPage() {
     { title: "banana", id: 3 },
   ];
 
-  let listItems = products.map((product) => (
+  const listItems = products.map((product) => (
     <li key={product.id}>{product.title}</li>
   ));
 
-  return <ul>{listItems}</ul>;
+  return (
+    <>
+      <ul>{listItems}</ul>
+    </>
+  );
 }
 
 export default function MyApp() {

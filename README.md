@@ -5,3 +5,5 @@ Created with CodeSandbox
 
 ### To do:
 - [ ] When learned to use state management, try ot Conditional Rendering
+- [ ] Build the tic-tact-toe app in react
+- [ ] Create the OTP page logic - even required for collecting the OTP
